@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+not_working_yet/
+.venv/
+__pycache__/
+*.csv
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+
+# OS/IDE files
+.DS_Store
+*.log
+*.txt
+
