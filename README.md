@@ -21,8 +21,13 @@
 ## 설치 및 실행 방법
 
 1. **저장소 다운로드**  
-    아래 링크에서 이 repository를 다운로드하세요.  
-    [Restaurant Sort GitHub Repository](https://github.com/ParkJ82/restaurant-sort.git)
+    ```bash
+    git clone https://github.com/ParkJ82/restaurant-sort.git
+    ```
+    - 이후에 프로젝트 다이렉터리로 이동합니다.
+    ```bash
+    git cd restaurant-sort
+
 
 2. **필요한 라이브러리 설치**  
     터미널에서 다음 명령어를 실행하여 필요한 라이브러리를 설치하세요:
