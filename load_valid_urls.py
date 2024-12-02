@@ -6,7 +6,7 @@ def load_valid_urls(csv_path, search_term, excluded_terms):
     """Load and filter valid URLs from a CSV file."""
     with open(csv_path, encoding='cp949', errors='ignore') as file:
         return [
-            (f"https://search.naver.com/search.naver?query={row['사업장명']}+{extract_district_neighborhood(row['지번주소'])}", row['사업장명'])
+            (f"https://search.naver.com/search.naver?query={row['사업장명']}+{extract_district_neighborhood(row['지번주소'])}", row['사업장명'], row['도로명주소'])
             for row in csv.DictReader(file)
             if is_valid_row(row, search_term, excluded_terms)
         ]
