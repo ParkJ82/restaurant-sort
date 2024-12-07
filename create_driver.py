@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.options import Options
 chrome_options = Options()
 chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--headless")  # Add headless mode
 
 # Initialize WebDriver temporarily to fetch the User-Agent
 temp_driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)

@@ -12,11 +12,16 @@ base_url = "https://map.naver.com/p/entry/place/"
 
 # url: [query, 사업장명, 도로명주소]
 # content: rating html, restaurant id, 종류
-def save_valid_url(url, output_file, lock):
+def save_valid_url(url, output_file, lock, count):
     """Validate and save URLs that meet specific conditions."""
+    print(url[0])
     content = scrape_url_data(*url)
+    count[0] += 1
+    print(f"Count: {count[0]}")
+    print(content[2])
     if content[0]:
         is_valid, first, third = parse_html(content[0].prettify())
+        print(url[1], first, third)
         if is_valid:
             print(f"Valid: {url[0]} | Rating: {round(first/third, 1)}")
             with lock:

@@ -45,6 +45,7 @@ def scrape_url_data(url, business_name, address):
     try:
         driver.get(url)
         time.sleep(3)
+        
         soup = BeautifulSoup(driver.page_source, 'html.parser')
 
         # Try to find main content
